@@ -8,7 +8,7 @@ module.exports = { // webpack에서 중요한 4가지 설정 : entry, module, pl
         extensions: ['.js', '.vue'], // 확장자 처리 -> import시 뒤 확장자 생략 가능
     },
     entry: { //<script>에서 가장 대표가 되는 파일
-        app: path.join(__dirname, 'main.js'),
+        app: path.join(__dirname + '/src', 'main.js'),
     },
     module: { //webpack의 핵심(rules로 합침)) 
         // 자바스크립트만 처리하는 webpack을 위한 rules

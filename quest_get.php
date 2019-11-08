@@ -65,6 +65,11 @@ function change_location(x, y, str) {
 	$(".send-button").addClass("active");
 	$(".send-button button").removeAttr("disabled");
 }
+
+$(function() {
+	if(window.nativeApp.onLoad != undefined)
+		window.nativeApp.onLoad();
+});
 </script>
 
 <?php

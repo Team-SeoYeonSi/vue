@@ -72,7 +72,8 @@ function change_location(x, y, str) {
 }
 
 $(function() {
-	window.nativeApp.onLoad();
+	if(window.nativeApp != undefined)
+		window.nativeApp.onLoad();
 });
 </script>
 

@@ -4,6 +4,7 @@ function callApi(api, json, callback){
         type: "POST",
         url: api,
         data: json,
+        xhrFields: { withCredentials: true },
         success: function (response) {
             console.log('response' + JSON.stringify(response));
             callback(response);

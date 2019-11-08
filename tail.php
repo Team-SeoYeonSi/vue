@@ -1,2 +1,3 @@
-</body>
-</html>
+<?php
+include_once("./_tail.php");
+?>

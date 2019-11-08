@@ -1,5 +1,5 @@
 <?php
-include("./head.php");
+include("./_head.php");
 ?>
 <style>
 .logo { font-size:40px; text-align:center; margin-top:40%; height:100px; }
@@ -22,5 +22,5 @@ include("./head.php");
 	</div>
 </div>
 <?php
-include("./tail.php");
+include("./_tail.php");
 ?>

@@ -2,21 +2,26 @@
 <!-- 큰 뼈대를 template, script, style 로 구분-->
 <template>
     <div>
-        <h1>{{test}}</h1>
-        <h2>{{test}}</h2>
-	<p>webhook6</p>
+        <loginTable v-if="!logined" />
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+import store from './store';
+import loginTable from './loginTable';
+
     export default {
+        store,
+        components: {
+            loginTable,
+        },
         data() { // 일반 데이터
             return {
-                test: 'Hello World!',
             }
         },
         computed: { // 일반 데이터를 가공하여 사용할 때 : 중요!
-            
+            ...mapState(['logined']),
         },
         methods: {
             
@@ -29,11 +34,14 @@
         },
         beforeDestroy(){
 
-        }
+        },
+        watch: {
+
+        },
     };
 </script>
 
 
-<style scoped> /* scoped : 해당 컴포넌트 안에서만 사용 가능한 css
-성능 상 붙이는게 좋다*/
+<style> /* scoped : 해당 컴포넌트 안에서만 사용 가능한 css */
+
 </style>

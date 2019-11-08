@@ -1,5 +1,5 @@
 import Vue from 'vue';
 
-import test from './test';
+import questAdventure from './questAdventure';
 
-new Vue(test).$mount('#root');
+new Vue(questAdventure).$mount('#root');

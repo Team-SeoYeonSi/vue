@@ -62,6 +62,8 @@ function change_location(x, y, str) {
 	options.center = new kakao.maps.LatLng(x, y);
 	map = new kakao.maps.Map(container, options);
 	$("#map-location-name").text(str);
+	$(".send-button").addClass("active");
+	$(".send-button button").removeAttr("disabled");
 }
 </script>
 

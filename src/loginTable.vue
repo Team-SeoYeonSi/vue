@@ -29,7 +29,7 @@ export default {
     methods: {
         onClickLogin(platform) {
             if (platform === 'kakao'){
-                this.$http.get('/user/login')
+                this.$http.get('https://api.seoyeonsi.bu.to/user/login') // /user/login
                 .then((response)=>{
                     this.users = response.data;
                 });

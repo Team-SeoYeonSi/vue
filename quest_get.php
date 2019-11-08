@@ -4,7 +4,7 @@ include("./head.php");
 
 <style>
 .sub-nav { padding:12px; background-color:#fff; border-bottom:1px solid #ddd; }
-.sub-nav h3 { font-size:18px; font-weight:bold; }
+.sub-nav h3 { font-size:16px; font-weight:bold; }
 
 .quest-form { padding-bottom:60px; }
 .quest-form .map { height:150px; }

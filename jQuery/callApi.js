@@ -10,7 +10,7 @@ function callApi(api, json, callback, method="POST"){
             callback(response);
         },
         error : (err)=>{
-            console.log('err' + err);
+            console.log(err);
         },
     });
 }

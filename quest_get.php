@@ -44,8 +44,8 @@ include("./head.php");
 		</label>
 	</div>
 </div>
-<div class="send-button active">
-	<button>퀘스트 받기</button>
+<div class="send-button">
+	<button disabled>퀘스트 받기</button>
 </div>
 
 

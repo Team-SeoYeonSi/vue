@@ -72,10 +72,13 @@ function change_location(x, y, str) {
 }
 
 $(function() {
+	callApi("<?php echo $API_URL; ?>/success", {}, function(data) {
+		console.log(data);
+	}, "GET");
+
 	if(window.nativeApp != undefined)
 		window.nativeApp.onLoad();
 
-	const sessionId = '<?php echo $_GET['session_id'];?>';
 	// createQuest
 	var json = {};
 	$('.send-button button').click(()=>{

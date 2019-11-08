@@ -31,26 +31,30 @@ include("./head.php");
 	<div class="location-select">
 		<span style="width:40px; display:inline-block;">거리</span>
 		<label>
-			<input class="with-gap" name="location" type="radio" checked />
+			<input class="with-gap" name="location" value="0" type="radio" checked />
 			<span>1km</span>
 		</label>
 		<label>
-			<input class="with-gap" name="location" type="radio" />
+			<input class="with-gap" name="location" value="1" type="radio" />
 			<span>10km</span>
 		</label>
 		<label>
-			<input class="with-gap" name="location" type="radio" />
+			<input class="with-gap" name="location" value="2" type="radio" />
 			<span>무관</span>
 		</label>
 	</div>
 </div>
 <div class="send-button">
-	<button disabled>퀘스트 받기</button>
+	<button class="waves-effect waves-light" disabled>퀘스트 받기</button>
 </div>
 
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9af8acaaca5009bc448377b7358e154f"></script>
+<script src="./jQuery.js"></script>
 <script>
+var _x = '';
+var _y = '';
+
 var container = $(".map")[0];
 var map;
 var options = {
@@ -60,6 +64,8 @@ var options = {
 
 function change_location(x, y, str) {
 	options.center = new kakao.maps.LatLng(x, y);
+	_x = x;
+	_y = y;
 	map = new kakao.maps.Map(container, options);
 	$("#map-location-name").text(str);
 	$(".send-button").addClass("active");

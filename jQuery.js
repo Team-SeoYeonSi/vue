@@ -1,3 +1,4 @@
+// createQuest
 $('.send-button button').click(()=>{
 	// const x = $().val();
 	// const y = $().val();
@@ -5,6 +6,7 @@ $('.send-button button').click(()=>{
     const near = $(':input:radio[name=location]:checked').val();
     console.log('location : ' + location);
     console.log('near : ' + near);
+    console.log(typeof(near));
 
 	const json = {
 		'x': _x,
@@ -13,7 +15,14 @@ $('.send-button button').click(()=>{
 		'near': near,
 	};
 	callApi('https://api.seoyeonsi.bu.to/quest/create', json, (data)=>{
-		window.location.href = data;
+        data = JSON.parse(data);
+        if (data.status === 'success'){
+            alert(data.message);
+            window.location.href = 'https://front.seoyeonsi.bu.to/layout.php';
+        } else {
+            alert('에러 발생, 콘솔창 참고');
+            console.log(JSON.stringify(data));
+        }
 	});
 });
 

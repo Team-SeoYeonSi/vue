@@ -35,6 +35,7 @@ var options = {
 	center: new kakao.maps.LatLng(33.450701, 126.570667),
 	level: 3
 };
+var quest;
 
 function change_location(x, y) {
 	options.center = new kakao.maps.LatLng(x, y);
@@ -42,18 +43,20 @@ function change_location(x, y) {
 }
 
 function change_quest(quest) {
+	quest = quest;
 	$(".quest-info").text(quest);
 }
 
 $(function() {
-	$.getJSON(json, (data)=> {
+	data = json;
+	console.log(data);
 		if (! (data.x && data.y && data.location && data.near)) {
 			alert('생성된 Quest가 없어 Quest 생성 페이지로 이동합니다.');
 			window.location.href = 'https://front.seoyeonsi.bu.to/quest_get.php';
 		} else {
-			
+			$('.quest-info').text(quest);
 		}
-	});
+	
 });
 
 

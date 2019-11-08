@@ -4,7 +4,7 @@ function callApi(api, json, callback){
         url: api,
         data: json,
         success: function (response) {
-            console.log('response' + response);
+            console.log('response' + JSON.stringify(response));
             callback(response);
         },
         error : (err)=>{
@@ -12,3 +12,4 @@ function callApi(api, json, callback){
         },
     });
 }
+

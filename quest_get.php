@@ -50,7 +50,6 @@ include("./head.php");
 
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9af8acaaca5009bc448377b7358e154f"></script>
-<script src="./jQuery/jQuery.js"></script>
 <script>
 var _x = '';
 var _y = '';

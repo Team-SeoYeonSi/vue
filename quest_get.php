@@ -50,6 +50,7 @@ include("./head.php");
 
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9af8acaaca5009bc448377b7358e154f"></script>
+<script src="./jQuery.js"></script>
 <script>
 var _x = '';
 var _y = '';
@@ -71,23 +72,7 @@ function change_location(x, y, str) {
 	$(".send-button button").removeAttr("disabled");
 }
 
-$('.send-button button').click(()=>{
-	// const x = $().val();
-	// const y = $().val();
-	const location = $('#map-location-name').val();
-	const near = $('.with-gap').val();
 
-	const json = {
-		'x': _x,
-		'y': _y,
-		'location': location,
-		'near': near,
-	};
-	console.log(_x + _y);
-	callApi('/quest/create', json, (data)=>{
-		window.location.href = data;
-	});
-});
 
 </script>
 

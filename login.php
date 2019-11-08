@@ -7,6 +7,14 @@ include("./_head.php");
 .buttons button { width:100%; height:50px; border:0; border-radius:10px; margin-top:50px; }
 .buttons .btn-kakao { background-color:#ffde00; color:#000; vertical-align:middle; }
 .buttons .btn-kakao img { vertical-align:middle; margin-top:-4px; margin-right:10px; }
+html {
+	/* background: linear-gradient(rgb(255, 110, 97), #ef5350);
+	background-repeat: no-repeat; */
+	/*#ff5252
+	#ef5350 : red lighten-1
+	 */
+	 background-color : #fdd835  ;
+}
 </style>
 <div class="container">
 	<div class="logo">

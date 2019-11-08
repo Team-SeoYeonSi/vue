@@ -1,7 +1,7 @@
 
-function callApi(api, json, callback){
+function callApi(api, json, callback, method="POST"){
     $.ajax({
-        type: "POST",
+        type: method,
         url: api,
         data: json,
         xhrFields: { withCredentials: true },

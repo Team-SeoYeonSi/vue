@@ -1,3 +1,6 @@
+<?php
+$API_URL = "https://api.seoyeonsi.bu.to";
+?>
 <!doctype html>
 <html lang="ko">
 <head>

@@ -13,10 +13,12 @@ include("./head.php");
 		<img src="./img/logo.png">
 	</div>
 	<div class="buttons">
-		<button class="z-depth-2 waves-effect waves-light btn-kakao">
-			<img src="./img/kakao_sm.png">
-			카카오계정으로 로그인
-		</button>
+		<a href="<?php echo $API_URL; ?>/member/kakao/login">
+			<button class="z-depth-2 waves-effect waves-light btn-kakao">
+				<img src="./img/kakao_sm.png">
+				카카오계정으로 로그인
+			</button>
+		</a>
 	</div>
 </div>
 <?php

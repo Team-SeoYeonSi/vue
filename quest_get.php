@@ -50,6 +50,7 @@ include("./head.php");
 
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9af8acaaca5009bc448377b7358e154f"></script>
+<script src="./jQuery/jQuery.js"></script>
 <script>
 var _x = '';
 var _y = '';
@@ -72,7 +73,40 @@ function change_location(x, y, str) {
 }
 
 $(function() {
-	window.nativeApp.onLoad();
+	if(window.nativeApp != undefined)
+		window.nativeApp.onLoad();
+
+	// createQuest
+	var json = {};
+	$('.send-button button').click(()=>{
+	// const x = $().val();
+	// const y = $().val();
+	const location = $('#map-location-name').text();
+    const near = $(':input:radio[name=location]:checked').val();
+    console.log('location : ' + location);
+    console.log('near : ' + near);
+    console.log(typeof(near));
+
+	json = {
+		'x': _y,
+		'y': _x,
+		'location': location,
+		'near': near,
+	};
+	callApi('<?php echo $API_URL; ?>/quest/create', json, (data)=>{
+		console.log(data);
+        data = JSON.parse(data);
+        if (data.status === 'success'){
+            alert(data.message);
+            window.location.href = 'https://front.seoyeonsi.bu.to/quest_confirm.php';
+        } else {
+            alert('에러 발생, 콘솔창 참고');
+            console.log(JSON.stringify(data));
+        }
+	});
+});
+
+
 });
 </script>
 

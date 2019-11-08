@@ -10,8 +10,8 @@ $('.send-button button').click(()=>{
     console.log(typeof(near));
 
 	json = {
-		'x': _x,
-		'y': _y,
+		'x': _y,
+		'y': _x,
 		'location': location,
 		'near': near,
 	};

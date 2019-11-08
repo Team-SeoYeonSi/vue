@@ -50,6 +50,8 @@ $(function() {
 		if (! (data.x && data.y && data.location && data.near)) {
 			alert('생성된 Quest가 없어 Quest 생성 페이지로 이동합니다.');
 			window.location.href = 'https://front.seoyeonsi.bu.to/quest_get.php';
+		} else {
+			
 		}
 	});
 });

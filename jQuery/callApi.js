@@ -9,7 +9,7 @@ function callApi(api, json, callback){
             callback(response);
         },
         error : (err)=>{
-            console.log(JSON.stringify(err));
+            console.log('err' + err);
         },
     });
 }

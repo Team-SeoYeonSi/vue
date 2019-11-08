@@ -17,8 +17,8 @@ include("./head.php");
 
 <div class="sub-nav">
 	<h3>퀘스트 확인</h3>
-	<button class="cancel">
-		<i class="fas fa-redo-alt"></i>
+	<button class="cancel waves-effect waves-light">
+		<i class="fas fa-redo-alt "></i>
 	</button>
 </div>
 <div class="quest-info-box">
@@ -44,6 +44,17 @@ function change_location(x, y) {
 function change_quest(quest) {
 	$(".quest-info").text(quest);
 }
+
+$(function() {
+	$.getJSON(json, (data)=> {
+		if (! (data.x && data.y && data.location && data.near)) {
+			alert('생성된 Quest가 없어 Quest 생성 페이지로 이동합니다.');
+			window.location.href = 'https://front.seoyeonsi.bu.to/quest_get.php';
+		}
+	});
+});
+
+
 </script>
 
 <?php

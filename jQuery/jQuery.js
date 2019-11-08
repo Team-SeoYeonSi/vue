@@ -1,4 +1,5 @@
 // createQuest
+var json = {};
 $('.send-button button').click(()=>{
 	// const x = $().val();
 	// const y = $().val();
@@ -8,7 +9,7 @@ $('.send-button button').click(()=>{
     console.log('near : ' + near);
     console.log(typeof(near));
 
-	const json = {
+	json = {
 		'x': _x,
 		'y': _y,
 		'location': location,
@@ -18,7 +19,7 @@ $('.send-button button').click(()=>{
         data = JSON.parse(data);
         if (data.status === 'success'){
             alert(data.message);
-            window.location.href = 'https://front.seoyeonsi.bu.to/layout.php';
+            window.location.href = 'https://front.seoyeonsi.bu.to/quest_confirm.php';
         } else {
             alert('에러 발생, 콘솔창 참고');
             console.log(JSON.stringify(data));

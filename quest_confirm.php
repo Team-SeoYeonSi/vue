@@ -36,6 +36,7 @@ var options = {
 	level: 3
 };
 var quest;
+var json;
 
 function change_location(x, y) {
 	options.center = new kakao.maps.LatLng(x, y);
@@ -48,7 +49,10 @@ function change_quest(quest) {
 }
 
 $(function() {
-	data = json;
+	callApi('https://api.seoyeonsi.bu.to/confirm', {}, (result)=>{
+		json = result;
+	});
+	const data = json;
 	console.log(data);
 		if (! (data.x && data.y && data.location && data.near)) {
 			alert('생성된 Quest가 없어 Quest 생성 페이지로 이동합니다.');

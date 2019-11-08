@@ -15,6 +15,7 @@ $API_URL = "https://api.seoyeonsi.bu.to";
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	<script src="./sendAddress.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="./callApi.js"></script>
 </head>
 <body>

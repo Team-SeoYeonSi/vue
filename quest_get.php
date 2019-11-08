@@ -75,6 +75,7 @@ $(function() {
 	if(window.nativeApp != undefined)
 		window.nativeApp.onLoad();
 
+	
 	// createQuest
 	var json = {};
 	$('.send-button button').click(()=>{

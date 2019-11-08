@@ -49,7 +49,7 @@ function change_quest(quest) {
 }
 
 $(function() {
-	callApi('https://api.seoyeonsi.bu.to/confirm', {}, (result)=>{
+	callApi('<?php echo $API_URL; ?>/confirm', {}, (result)=>{
 		json = result;
 	});
 	const data = json;

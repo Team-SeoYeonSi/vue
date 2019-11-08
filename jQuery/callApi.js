@@ -23,8 +23,8 @@ function callApi(api, json, callback, method="POST"){
 				console.log('response' + JSON.stringify(response));
 				callback(response);
 			},
-			error : (err)=>{
-				console.log(err);
+			error : function(request,status,error){
+				alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
 			},
 		});
 	}
